@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(CardApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Column( mainAxisAlignment: MainAxisAlignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
@@ -33,7 +34,33 @@ class MyApp extends StatelessWidget {
                 child: Text("Box 3"),
                 color: Colors.blue,
               ),
-              Container(width: double.infinity,),
+              Container(
+                width: double.infinity,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CardApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage("images/tonic.png"),
+                ),
+              Text("Tonic Bottle", textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 30.0, color: Colors.white, fontWeight: FontWeight.bold)
+              )
             ],
           ),
         ),
