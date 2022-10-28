@@ -3,23 +3,41 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey,
-        appBar: AppBar(
-          title: Text("I am Rich "),
-          backgroundColor: Colors.blueGrey,
-        ),
-        body: Center(
-          child: Image(
-            image: AssetImage("images/tonic.png"),
-            // for netwotk image
-          //   image: NetworkImage(
-          //       "https://cdn.pixabay.com/photo/2022/10/16/13/53/early-morning-7525151_1280.jpg"),
-           ),
+        body: SafeArea(
+          child: Column( mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                child: Text("Box 1"),
+                width: 100.0,
+                height: 100.0,
+                color: Colors.red,
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.green,
+                child: Text("Box 2"),
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                child: Text("Box 3"),
+                color: Colors.blue,
+              ),
+              Container(width: double.infinity,),
+            ],
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
