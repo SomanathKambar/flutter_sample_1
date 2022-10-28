@@ -53,6 +53,7 @@ class CardApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -73,32 +74,28 @@ class CardApp extends StatelessWidget {
                   fontWeight: FontWeight.bold
                 ),
               ),
-              Container( color: Colors.white,
+              SizedBox(height: 20.0, width: 150.0, child: Divider(color: Colors.teal.shade100,),),
+              Card( color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                children: [
-                  Icon(Icons.phone, color: Colors.teal,),
-                  SizedBox(width: 10.0,),
-                  Text("+91 123 456 7890",
-                  style: TextStyle(
-                    color: Colors.teal.shade900
-                  ),),
-                ],
+                child: ListTile(
+                  leading:Icon(Icons.phone,
+                    color: Colors.teal,) ,
+                  title: Text("+91 123 456 7890",
+                    style: TextStyle(
+                        color: Colors.teal.shade900
+                    ),
+                  ),
+                ),
               ),
-              ),
-              Container( color: Colors.white,
+              Card( color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(Icons.email, color: Colors.teal,),
-                    SizedBox(width: 10.0,),
-                    Text("tonic@bottle.com",
-                      style: TextStyle(
-                          color: Colors.teal.shade900
-                      ),),
-                  ],
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.teal,),
+                  title: Text("tonic@bottle.com",
+                    style: TextStyle(
+                        color: Colors.teal.shade900
+                    ),
+                  ),
                 ),
               ),
             ],
