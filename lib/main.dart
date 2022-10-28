@@ -58,8 +58,12 @@ class CardApp extends StatelessWidget {
                 radius: 50.0,
                 backgroundImage: AssetImage("images/tonic.png"),
                 ),
-              Text("Tonic Bottle", textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 30.0, color: Colors.white, fontWeight: FontWeight.bold)
+              Text("Tonic Bottle",
+                  style: TextStyle(
+                    fontFamily: "Pacifico",
+                    fontSize: 30.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold)
               )
             ],
           ),
