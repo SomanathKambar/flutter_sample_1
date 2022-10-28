@@ -64,6 +64,14 @@ class CardApp extends StatelessWidget {
                     fontSize: 30.0,
                     color: Colors.white,
                     fontWeight: FontWeight.bold)
+              ),
+              Text("Most Delicious Drink",
+                style: TextStyle(
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  fontFamily: "Source Sans Pro",
+                  fontWeight: FontWeight.bold
+                ),
               )
             ],
           ),
