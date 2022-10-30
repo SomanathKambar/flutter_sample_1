@@ -1,9 +1,18 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sample_1/AppWithState.dart';
 
 void main() {
-  runApp(CardApp());
+  runApp( MaterialApp(
+    home: Scaffold(backgroundColor: Colors.red,
+      appBar: AppBar(title: Text("Dicee"),
+        backgroundColor: Colors.red,
+      ),
+      body: DicePage(),
+    )
+    ,),
+  );
 }
 
 class MyApp extends StatelessWidget {
