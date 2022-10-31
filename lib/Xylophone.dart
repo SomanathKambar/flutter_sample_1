@@ -2,6 +2,15 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class Xylophone extends StatelessWidget {
+
+  Widget getButton({ required Color color, required int noteID}) {
+    return  Expanded(
+      child: MaterialButton(color: color, onPressed: () {
+        playAudio(noteID);
+      },),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: SafeArea(
@@ -10,41 +19,13 @@ class Xylophone extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              child: MaterialButton(color: Colors.red, onPressed: () {
-                playAudio(1);
-              },),
-            ),
-            Expanded(
-              child: MaterialButton(color: Colors.orange, onPressed: () {
-                playAudio(2);
-              },),
-            ),
-            Expanded(
-              child: MaterialButton(color: Colors.yellow, onPressed: () {
-                playAudio(3);
-              },),
-            ),
-            Expanded(
-              child: MaterialButton(color: Colors.green, onPressed: () {
-                playAudio(4);
-              },),
-            ),
-            Expanded(
-              child: MaterialButton(color: Colors.blue, onPressed: () {
-                playAudio(5);
-              },),
-            ),
-            Expanded(
-              child: MaterialButton(color: Colors.indigo, onPressed: () {
-                playAudio(6);
-              },),
-            ),
-            Expanded(
-              child: MaterialButton(color: Colors.purple, onPressed: () {
-                playAudio(7);
-              },),
-            ),
+            getButton(color: Colors.red, noteID: 1),
+            getButton(color: Colors.orange, noteID: 2),
+            getButton(color: Colors.yellow, noteID: 3),
+            getButton(color: Colors.green, noteID: 4),
+            getButton(color: Colors.blue, noteID: 5),
+            getButton(color: Colors.indigo, noteID: 6),
+            getButton(color: Colors.purple, noteID: 7),
           ],
         )
       ,)
