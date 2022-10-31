@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_sample_1/AppWithState.dart';
+import 'package:flutter_sample_1/Xylophone.dart';
 
 void main() {
   runApp( MaterialApp(
@@ -10,7 +11,7 @@ void main() {
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
-      body: DicePage(),
+      body: Xylophone(),
     )
     ,),
   );
