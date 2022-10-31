@@ -6,10 +6,10 @@ import 'package:flutter_sample_1/Xylophone.dart';
 
 void main() {
   runApp( MaterialApp(
-    home: Scaffold(backgroundColor: Colors.red,
-      appBar: AppBar(title: Text("Dicee"),
+    home: Scaffold(backgroundColor: Colors.transparent,
+      appBar: AppBar(title: Text("XyloPhone"),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.black,
       ),
       body: Xylophone(),
     )

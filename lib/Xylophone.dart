@@ -6,29 +6,45 @@ class Xylophone extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(home: SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.black,
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            MaterialButton(color: Colors.red, onPressed: () {
-              playAudio(1);
-            },),
-            MaterialButton(color: Colors.orange, onPressed: () {
-              playAudio(2);
-            },),
-            MaterialButton(color: Colors.yellow, onPressed: () {
-              playAudio(3);
-            },),
-            MaterialButton(color: Colors.green, onPressed: () {
-              playAudio(4);
-            },),
-            MaterialButton(color: Colors.blue, onPressed: () {
-              playAudio(5);
-            },),
-            MaterialButton(color: Colors.indigo, onPressed: () {
-              playAudio(6);
-            },),
-            MaterialButton(color: Colors.purple, onPressed: () {
-              playAudio(7);
-            },),
+            Expanded(
+              child: MaterialButton(color: Colors.red, onPressed: () {
+                playAudio(1);
+              },),
+            ),
+            Expanded(
+              child: MaterialButton(color: Colors.orange, onPressed: () {
+                playAudio(2);
+              },),
+            ),
+            Expanded(
+              child: MaterialButton(color: Colors.yellow, onPressed: () {
+                playAudio(3);
+              },),
+            ),
+            Expanded(
+              child: MaterialButton(color: Colors.green, onPressed: () {
+                playAudio(4);
+              },),
+            ),
+            Expanded(
+              child: MaterialButton(color: Colors.blue, onPressed: () {
+                playAudio(5);
+              },),
+            ),
+            Expanded(
+              child: MaterialButton(color: Colors.indigo, onPressed: () {
+                playAudio(6);
+              },),
+            ),
+            Expanded(
+              child: MaterialButton(color: Colors.purple, onPressed: () {
+                playAudio(7);
+              },),
+            ),
           ],
         )
       ,)
